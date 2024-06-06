@@ -3,13 +3,10 @@
 Console.Write(@"
 
 
-
-
-\u306b\
 WELCOME TO THE EXILE
 
     enjoy your stay
-      - balls
+      - SP4ZE
                 ,;,
                 *|*
    ,;,         _*|*_
@@ -17,8 +14,6 @@ WELCOME TO THE EXILE
    /\      /|/ \   / \  /\      ,;,
   /  \/\  | /    /    |/  |\    *|*  __/\
 _/   /  \/ /|   /\     \    \ ___|__/ /  \_
-
-
 
 
 
