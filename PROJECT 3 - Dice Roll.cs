@@ -4,9 +4,9 @@
 Random rand = new(); // creates an instance of a new random class
 
 // assigning random values
-int throw1 = 2;
-int throw2 = 3;
-int throw3 = 3;
+int throw1 = rand.Next(1,7);
+int throw2 = rand.Next(1,7);
+int throw3 = rand.Next(1,7);
 
 int total = throw1 + throw2 + throw3;
 
