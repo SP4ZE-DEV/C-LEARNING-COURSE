@@ -1,0 +1,74 @@
+/*
+GRAPH BUBBLE SORT VIZUALIZER
+
+INPUT: an array of integers or any length
+
+PRORCESS 1: PERFORM BUBBLE SORT ON THE ARRAY
+
+PROECESS 2: CREATE GRAPH OF WITH EACH 1s IN ARRAY INDEX REPRESENTED BY A (char) IN BAR CHART FORMAT
+
+*/
+
+// INPUTS
+int[] array = {3, 54, 1, 113, 12, 45, 63, 125};
+
+// ASCENDING BUBBLE SORT
+int temp_num, cur_val, next_val, swaps = 0;
+bool sorted = false;
+
+while (!sorted)
+{
+    swaps = 0;
+
+    for (int n = 0; n < array.Length-1; n++)
+    {
+        cur_val = array[n];
+        next_val = array[n+1];
+
+        if (cur_val > next_val)
+        { 
+            temp_num = next_val;
+            array[n+1] = cur_val;
+            array[n] = temp_num;
+
+            swaps++;
+            Console.WriteLine("\tswapped");
+        }         
+    }
+
+    if (swaps == 0) sorted = true;
+    Console.WriteLine("\tpass completed");
+}
+// OUTPUT BUBBLE SORT
+foreach (int n in array)
+{
+    Console.WriteLine(n);
+}
+
+
+// VISUALIZING ARRAYS
+
+Draw_Graph(array, 1);
+Draw_Graph(array, 2);
+Draw_Graph(array, 3);
+
+
+// METHODS
+static void Draw_Graph(int[] array, int bar_width) 
+{
+    Console.WriteLine("\n\t\t ARRAY VISUALIZATION");
+    foreach (int num in array)
+    {
+        Console.WriteLine("");
+        for (int b = 0; b < bar_width; b++)
+        {
+            Console.WriteLine("");
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write("-");
+            }    
+            Console.WriteLine("+");
+        }
+    }
+    Console.WriteLine("\n\n END");
+}
